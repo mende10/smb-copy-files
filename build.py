@@ -11,7 +11,7 @@ use_plugin("python.install_dependencies")
 
 name = "smb-copy-files"
 default_task = "publish"
-version = "1.0.2" 
+version = "1.0.3" 
 
 @init
 def set_properties(project):

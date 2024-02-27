@@ -62,6 +62,8 @@ PULL_CONNECTION = {
     'DESTINATION_DIRECTORY': '',
     'SUBFOLDER': '',
     'SOURCE_DIRECTORY': '',
+    'RETRY_LIMIT': '', 
+    'SLEEP_DURATION': '',
     'YEAR': '',
     'MONTH': '',
     'DAY': '',

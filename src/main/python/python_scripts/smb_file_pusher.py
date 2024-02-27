@@ -22,7 +22,7 @@ class SMBFilePusher:
 
         self.subfolder = self.push_connection['SUBFOLDER']
         self.destination_directory = self.push_connection['DESTINATION_DIRECTORY']
-        env_str = "_UAT" if environment == "UAT" else ""
+        env_str = "_UAT" if environment == "UAT" and self.push_connection['WORM'] else ""
         self.destination_directory = self.destination_directory.format(env_str)
 
     def log(self, message, level="INFO"):
@@ -38,7 +38,7 @@ class SMBFilePusher:
                 continue
 
             source_file_path = os.path.join(self.source_directory, file_name)
-            destination_file_path = f'\\\\{self.hostname}\\{self.destination_directory}{self.year}{self.subfolder}\\{file_name}'
+            destination_file_path = f'\\\\{self.hostname}\\{self.destination_directory}\\{file_name}'
 
             # Print the pre-configured parameters
             self.log("SMB File Pusher Configuration:")

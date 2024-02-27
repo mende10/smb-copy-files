@@ -11,10 +11,11 @@ use_plugin("python.install_dependencies")
 
 name = "smb-copy-files"
 default_task = "publish"
-
+version = "1.0.2" 
 
 @init
 def set_properties(project):
     project.set_property("coverage_break_build", False)
     project.depends_on("PySmbClient")
+    project.version = version  
     pass

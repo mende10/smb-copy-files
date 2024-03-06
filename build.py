@@ -15,6 +15,7 @@ version = "1.0.3"
 
 @init
 def set_properties(project):
+    #message
     project.set_property("coverage_break_build", False)
     project.depends_on("PySmbClient")
     project.version = version  
